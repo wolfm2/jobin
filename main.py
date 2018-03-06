@@ -15,9 +15,11 @@ def main():
 sz_90m = 90 * (1024 ** 2)
 
 # unzip large files
-def unpack(): # zip -FF dataIn.zip --out y.zip
-  relpath = os.path.dirname(nbk_path)
-  os.system('/usr/bin/zip -FF ~/jobin/' + relpath + '/dataIn.zip --out out.zip')
+def unpack():
+  path = '~/jobin/' + os.path.dirname(nbk_path) + '/dataIn.zip'
+  if not os.path.exists(path)
+    return
+  os.system('/usr/bin/zip -FF ' + path + ' --out out.zip')
   os.system('/usr/bin/unzip -u ./out.zip -d .')
   os.system('rm ./out.zip')
 
