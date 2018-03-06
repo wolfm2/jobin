@@ -1,7 +1,7 @@
 import papermill as pm
 import os
 
-nbk_path = "minibook/test/intro_python.ipynb" # RELATIVE to repo base!
+nbk_path = "minibook/amazonFirstIter/_03_submission.ipynb" # RELATIVE to repo base!
 ret_files = []
 prep_files = False  # prep files before sending
 
@@ -13,7 +13,6 @@ def main():
   )
 
 sz_90m = 90 * (1024 ** 2)
-sz_90m = 90 * (1024 ** 1)
 
 # unzip large files
 def unpack(): # zip -FF dataIn.zip --out y.zip
