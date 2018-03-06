@@ -13,6 +13,7 @@ def main():
   )
 
 sz_90m = 90 * (1024 ** 2)
+sz_90m = 90 * (1024 ** 1)
 
 # unzip large files
 def unpack(): # zip -FF dataIn.zip --out y.zip
@@ -30,6 +31,7 @@ def pack(fn, zName):
   for f in fn: 
     zcall += " '" + f + "'"
   os.system(zcall)
+  os.system('git add ' + zName + '.z*')
 
 # preps large files before sending.
 def preSend():
