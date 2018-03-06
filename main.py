@@ -3,7 +3,7 @@ import os
 
 nbk_path = "minibook/test/intro_python.ipynb" # RELATIVE to repo base!
 ret_files = []
-prep_files = True  # prep files before sending
+prep_files = False  # prep files before sending
 
 def main():
   pm.execute_notebook(
