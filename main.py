@@ -24,7 +24,7 @@ def unpack():
   path = os.path.expanduser("~/jobin/") + os.path.dirname(nbk_path) + '/dataIn'
   if not os.path.exists(path + '.aa'):
     return
-  print ('cat ' + path + '.?? | tar -jxv --keep-newer-files')
+  #print ('cat ' + path + '.?? | tar -jxv --keep-newer-files')
   os.system('cat ' + path + '.?? | tar -jxv --keep-newer-files')
   #os.system('/usr/bin/zip -FF ' + path + ' --out out.zip')
   #os.system('/usr/bin/unzip -u ./out.zip -d .')
