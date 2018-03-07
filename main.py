@@ -2,8 +2,8 @@ import papermill as pm
 import os
 
 nbk_path = "minibook/amazon/_00_split.ipynb" # RELATIVE to repo base!
-#ret_files = ['sc.pkl', 'hv.pkl', 'lgs.pkl']
-ret_files = []
+ret_files = ['sc.pkl', 'hv.pkl', 'lgs.pkl']
+#ret_files = []
 prep_files = False  # prep files before sending
 
 def main():
@@ -13,9 +13,9 @@ def main():
     #parameters = dict(alpha=0.6, ratio=0.1)
   )
 
-sz_90m = 90 * (1024 ** 2)
+# sz_90m = 90 * (1024 ** 2)
 
-#zip broken
+#zip multipart broken
 #tar cvjf - '/home/ich/GIT/Amazon.csv'  | split --bytes=50MB - dataIn.
 #cat dataIn.?? | tar -jxv --keep-newer-files
 
@@ -34,12 +34,12 @@ def unpack():
 def pack(fn, zName): 
   if not len(fn):
     return
-  call = ""
+  args = ""
   #os.system('rm ' + zName + '.z*') # can't append split archives, so remove
   #zcall = '/usr/bin/zip ' + zName + '.zip -s 50m'
   call = 'tar cvjf - {} | split --bytes=50MB - dataIn.'
   for f in fn: 
-    call += " '" + f + "'"
+    args += " '" + f + "'"
   os.system(call.format(args))
   #os.system('git add ' + zName + '.z*')
 
