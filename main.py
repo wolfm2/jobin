@@ -33,12 +33,14 @@ def unpack():
 def pack(fn, zName): 
   if not len(fn):
     return
-  os.system('rm ' + zName + '.z*') # can't append split archives, so remove
-  zcall = '/usr/bin/zip ' + zName + '.zip -s 50m'
+  call = ""
+  #os.system('rm ' + zName + '.z*') # can't append split archives, so remove
+  #zcall = '/usr/bin/zip ' + zName + '.zip -s 50m'
+  call = 'tar cvjf - {} | split --bytes=50MB - dataIn.'
   for f in fn: 
-    zcall += " '" + f + "'"
-  os.system(zcall)
-  os.system('git add ' + zName + '.z*')
+    call += " '" + f + "'"
+  os.system(call.format(args))
+  #os.system('git add ' + zName + '.z*')
 
 # preps large files before sending.
 def preSend():
