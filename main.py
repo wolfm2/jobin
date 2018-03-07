@@ -2,7 +2,7 @@ import papermill as pm
 import os
 
 nbk_path = "minibook/amazon/_00_split.ipynb" # RELATIVE to repo base!
-ret_files = ['sc.pkl', 'hv.pkl', 'lgs.pkl']
+ret_files = ['../amazonFirstIter/sc.pkl', '../amazonFirstIter/hv.pkl', '../amazonFirstIter/lgs.pkl']
 #ret_files = []
 prep_files = False  # prep files before sending
 
@@ -37,7 +37,7 @@ def pack(fn, zName):
   args = ""
   #os.system('rm ' + zName + '.z*') # can't append split archives, so remove
   #zcall = '/usr/bin/zip ' + zName + '.zip -s 50m'
-  call = 'tar cvjf - {} | split --bytes=50MB - dataIn.'
+  call = 'tar cvjf - {} | split --bytes=50MB - ' + zName + '.'
   for f in fn: 
     args += " '" + f + "'"
   os.system(call.format(args))
