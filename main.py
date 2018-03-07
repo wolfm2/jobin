@@ -1,7 +1,7 @@
 import papermill as pm
 import os
 
-nbk_path = "minibook/amazonFirstIter/_03_submission.ipynb" # RELATIVE to repo base!
+nbk_path = "minibook/amazon/_00_split.ipynb" # RELATIVE to repo base!
 #ret_files = ['sc.pkl', 'hv.pkl', 'lgs.pkl']
 ret_files = []
 prep_files = False  # prep files before sending
