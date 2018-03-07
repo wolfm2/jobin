@@ -15,14 +15,19 @@ def main():
 
 sz_90m = 90 * (1024 ** 2)
 
+#zip broken
+#tar cvjf - '/home/ich/GIT/Amazon.csv'  | split --bytes=50MB - dataIn.
+#cat dataIn.?? | tar -jxv --keep-newer-files
+
 # unzip large files
 def unpack():
-  path = os.path.expanduser("~") + "/jobin/" + os.path.dirname(nbk_path) + '/dataIn.zip'
-  if not os.path.exists(path):
+  path = os.path.expanduser("~/jobin/") + os.path.dirname(nbk_path) + '/dataIn'
+  if not os.path.exists(path + '.aa'):
     return
-  os.system('/usr/bin/zip -FF ' + path + ' --out out.zip')
-  os.system('/usr/bin/unzip -u ./out.zip -d .')
-  os.system('rm ./out.zip')
+  os.system('cat ' + path + '.?? | tar -jxv --keep-newer-files')
+  #os.system('/usr/bin/zip -FF ' + path + ' --out out.zip')
+  #os.system('/usr/bin/unzip -u ./out.zip -d .')
+  #os.system('rm ./out.zip')
 
 # zip large files
 def pack(fn, zName): 
