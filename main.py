@@ -3,9 +3,6 @@ import os
 
 os.system('killall -s SIGKILL -u wolfm2')
 
-os.system('mv ../job.log .') 
-#os.system('ps aux > out.txt') 
-
 nbk_path = "minibook/amazon/_01_train.ipynb" # RELATIVE to repo base!
 #nbk_path = "minibook/system/runner.ipynb" # RELATIVE to repo base!
 #ret_files = ['../amazonFirstIter/sc.pkl', '../amazonFirstIter/hv.pkl', '../amazonFirstIter/lgs.pkl']
@@ -65,6 +62,10 @@ def preSend():
 if __name__ == '__main__':
 
   os.chdir(os.path.dirname(nbk_path))
+
+  os.system('mv ../job.log .') 
+  #os.system('ps aux > out.txt') 
+
   if prep_files:
     preSend()
     exit()
