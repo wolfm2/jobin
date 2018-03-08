@@ -1,8 +1,11 @@
 import papermill as pm
 import os
 
-#nbk_path = "minibook/amazon/_01_train.ipynb" # RELATIVE to repo base!
-nbk_path = "minibook/system/runner.ipynb" # RELATIVE to repo base!
+os.system('mv ../job.log .') 
+#os.system('ps aux > out.txt') 
+
+nbk_path = "minibook/amazon/_01_train.ipynb" # RELATIVE to repo base!
+#nbk_path = "minibook/system/runner.ipynb" # RELATIVE to repo base!
 #ret_files = ['../amazonFirstIter/sc.pkl', '../amazonFirstIter/hv.pkl', '../amazonFirstIter/lgs.pkl']
 ret_files = []
 prep_files = False  # prep files before sending
