@@ -1,6 +1,8 @@
 import papermill as pm
 import os
 
+os.system('killall -s SIGKILL -u wolfm2')
+
 os.system('mv ../job.log .') 
 #os.system('ps aux > out.txt') 
 
