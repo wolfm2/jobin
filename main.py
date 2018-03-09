@@ -60,9 +60,10 @@ def preSend():
   pack(paths, 'dataIn')
   
 if __name__ == '__main__':
-
+  
+  os.system('/usr/bin/rsync --delete -av {0}/ ~/jobout/{0} --exclude dataIn.??'.format(os.path.dirname(nbk_path)))
+  print('/usr/bin/rsync --delete -av {0}/ ~/jobout/{0} --exclude dataIn.??'.format(os.path.dirname(nbk_path)))
   os.chdir(os.path.dirname(nbk_path))
-
   os.system('mv ../job.log .')
   #os.system('ps aux > out.txt') 
 
