@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
   os.chdir(os.path.dirname(nbk_path))
 
-  #os.system('mv ../job.log .')
+  os.system('mv ../job.log .')
   #os.system('ps aux > out.txt') 
 
   if prep_files:
