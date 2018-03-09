@@ -3,8 +3,8 @@ import os
 
 # os.system('killall -s SIGKILL -u wolfm2')
 
-nbk_path = "minibook/amazon/_01_train.ipynb" # RELATIVE to repo base!
-#nbk_path = "minibook/system/runner.ipynb" # RELATIVE to repo base!
+#nbk_path = "minibook/amazon/_01_train.ipynb" # RELATIVE to repo base!
+nbk_path = "minibook/system/runner.ipynb" # RELATIVE to repo base!
 #ret_files = ['../amazonFirstIter/sc.pkl', '../amazonFirstIter/hv.pkl', '../amazonFirstIter/lgs.pkl']
 ret_files = []
 prep_files = False  # prep files before sending
