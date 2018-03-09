@@ -61,7 +61,7 @@ def preSend():
   
 if __name__ == '__main__':
   
-  os.system('/usr/bin/rsync --delete -av {0}/ ~/jobout/{0} --exclude dataIn.??'.format(os.path.dirname(nbk_path)))
+  os.system('/usr/bin/rsync --delete -av ~/jobin/{0}/ ~/jobout/{0} --exclude dataIn.??'.format(os.path.dirname(nbk_path)))
   print('/usr/bin/rsync --delete -av {0}/ ~/jobout/{0} --exclude dataIn.??'.format(os.path.dirname(nbk_path)))
   os.chdir(os.path.dirname(nbk_path))
   os.system('mv ../job.log .')
