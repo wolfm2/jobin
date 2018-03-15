@@ -3,8 +3,8 @@ import os
 
 # os.system('killall -s SIGKILL -u wolfm2')
 
-#nbk_path = "minibook/amazon/_01_train.ipynb" # RELATIVE to repo base!
-nbk_path = "minibook/amazonIter/_03_submission.ipynb" # RELATIVE to repo base!
+nbk_path = "minibook/amazon/_01_train.ipynb" # RELATIVE to repo base!
+#nbk_path = "minibook/amazonIter/_03_submission.ipynb" # RELATIVE to repo base!
 #nbk_path = "minibook/system/runner.ipynb" # RELATIVE to repo base!
 #nbk_path = "minibook/amazon/_01_train.0.ipynb" # RELATIVE to repo base!
 
